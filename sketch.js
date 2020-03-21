@@ -2,15 +2,18 @@ let walker;
 
 function setup() {
   createCanvas(400, 400);
-  walker = new Walker(200, 200)
   background(0);
-  frameRate(480);
 }
 
 function draw() {
-  background(0);
-  walker.update();
-  walker.show();
+  translate(width / 2, height / 2)
+
+  v = p5.Vector.random2D();
+  v.mult(random(50, 100));
+
+  strokeWeight(4);
+  stroke(255, 50);
+  line(0, 0, v.x, v.y);
 }
 
 
